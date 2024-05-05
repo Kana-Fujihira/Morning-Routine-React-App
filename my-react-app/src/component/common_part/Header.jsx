@@ -1,9 +1,9 @@
-
-
 function Header() {
   return (
     <>
-      <div></div>
+      <div>
+        <button>button dark and light mode</button>
+      </div>
     </>
   );
 }

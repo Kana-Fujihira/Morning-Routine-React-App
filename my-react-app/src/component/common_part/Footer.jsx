@@ -1,9 +1,13 @@
-
 function Footer() {
   return (
     <>
-      <div>
-      </div>
+      <nav>
+        <ul>
+          <li>Weather</li>
+          <li>ToDoList</li>
+          <li>Meditation</li>
+        </ul>
+      </nav>
     </>
   );
 }

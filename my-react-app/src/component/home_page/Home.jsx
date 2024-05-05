@@ -1,20 +1,22 @@
-import { Weather } from "../../assets/weather.png";
-import { ToDoList } from "../../assets/todolist.png";
-import { Meditation } from "../../assets/meditation.png";
+import weather from "/src/assets/weather.png";
+import todolist from "/src/assets/todolist.png";
+import meditation from "/src/assets/meditation.png";
 
 function Home() {
   return (
     <>
       <div>
         <div>
-          <img src={Weather} alt="Weather Icon" />
-          <p>kana</p>
+          <img src={weather} alt="Weather Icon" />
+          <p>Weather</p>
         </div>
         <div>
-          <img src={ToDoList} alt="To Do List Icon" />
+          <img src={todolist} alt="To Do List Icon" />
+          <p>To Do List</p>
         </div>
         <div>
-          <img src={Meditation} alt="Meditation Icon" />
+          <img src={meditation} alt="Meditation Icon" />
+          <p>Meditatation</p>
         </div>
       </div>
     </>
