@@ -1,10 +1,35 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import ReactDOM from "react-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "../src/App";
+import Home from "../src/component/home_page/Home";
+import Weather from "../src/component/weather_page/Weather";
+import ToDoList from "../src/component/to_do_list_page/ToDoList";
+import Meditation from "../src/component/meditation_page/Meditation";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+const router = createBrowserRouter([
+  {
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/weather",
+        element: <Weather />,
+      },
+      {
+        path: "/todolist",
+        element: <ToDoList />,
+      },
+      {
+        path: "/medidation",
+        element: <Meditation />,
+      },
+    ],
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <RouterProvider router={router} />,
+);
