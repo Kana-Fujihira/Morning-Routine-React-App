@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         element: <ToDoList />,
       },
       {
-        path: "/medidation",
+        path: "/meditation",
         element: <Meditation />,
       },
     ],
