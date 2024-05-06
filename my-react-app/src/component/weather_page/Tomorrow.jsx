@@ -1,9 +1,7 @@
-
 function Tomorrow() {
-  return (
-    <div>
-    </div>
-  );
+  return <div></div>;
 }
 
 export default Tomorrow;
+
+

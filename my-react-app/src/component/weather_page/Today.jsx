@@ -1,26 +1,18 @@
 import { useState, useEffect } from "react";
 
-const api = {
-  key: "f9a78b95b603f425ebcdcd9d16e540a9",
-  base: "https://api.openweathermap.org/data/2.5/",
-};
-
 function Today() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
   const [location, setLocation] = useState("");
 
-  const searchLocation = (event) => {
-    useEffect(() => {
-      if (event.key === "Enter") {
-        fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=f9a78b95b603f425ebcdcd9d16e540a9`
-        )
-          .then((res) => res.json())
-          .then((json) => setData(json));
-        console.log(data);
-      }
-    }, [location]);
-  };
+  useEffect(() => {
+    if (location !== null) {
+      fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=f9a78b95b603f425ebcdcd9d16e540a9`
+      )
+        .then((res) => res.json())
+        .then((json) => setData(json));
+    }
+  }, [location]);
 
   return (
     <div>
@@ -28,10 +20,27 @@ function Today() {
         <input
           type="text"
           value={location}
-          onChange={(event) => setLocation(event.target.value)}
-          onKeyPress={searchLocation}
-          placeholder="Put your Location"
+          onChange={(e) => setLocation(e.target.value)}
+          placeholder="City Name"
         />
+        <button
+          type="button"
+          onClick={(e) => {
+            e.preventDefault();
+            setLocation(location);
+            console.log(data);
+          }}
+        >
+          Search
+        </button>
+      </div>
+      <div>
+        <p>{data.name}</p>
+        {data.main ? <h1>{data.weather[0].main}</h1> : null}
+        <p>
+          {data.main ? <p>{data.main.temp_min}</p> : null}
+          {data.main ? <p>{data.main.temp_max}</p> : null}
+        </p>
       </div>
     </div>
   );
