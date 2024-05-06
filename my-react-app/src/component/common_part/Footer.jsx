@@ -4,6 +4,9 @@ function Footer() {
     <>
       <nav>
         <ul>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
           <Link to="/weather">
             <li>Weather</li>
           </Link>

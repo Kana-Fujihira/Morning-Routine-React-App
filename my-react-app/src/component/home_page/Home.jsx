@@ -6,7 +6,7 @@ import meditation from "/src/assets/meditation.png";
 function Home() {
   return (
     <>
-      <div>
+      <div className="containerHome">
         <div>
           <Link to="/weather">
             <img src={weather} alt="Weather Icon" />
