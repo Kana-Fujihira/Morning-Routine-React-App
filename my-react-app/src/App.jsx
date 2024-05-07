@@ -6,10 +6,16 @@ import Footer from "../src/component/common_part/Footer";
 function App() {
   return (
     <>
-      <div>
+      <div className="headerPart">
         <Header />
-        <Outlet />
-        <Footer />
+      </div>
+      <div className="containerAllPage">
+        <div className="outletPart">
+          <Outlet />
+        </div>
+        <div className="footerPart">
+          <Footer />
+        </div>
       </div>
     </>
   );

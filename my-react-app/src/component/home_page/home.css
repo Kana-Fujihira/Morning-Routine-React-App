@@ -1,0 +1,10 @@
+.weatherPart,
+.todolistPart,
+.meditationPart {
+  width: 100%;
+  padding: 7vh;
+  margin: 19%;
+  border-radius: 3vh;
+  background-color: whitesmoke;
+  opacity: 0.5;
+}
