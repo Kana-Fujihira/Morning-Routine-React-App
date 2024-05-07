@@ -1,10 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --background-color: blue;
-  --font-color: red;
+.weatherPart,
+.todolistPart,
+.meditationPart {
+  width: 100%;
+  padding: 7vh;
+  margin: 19%;
+  border-radius: 3vh;
+  background-color: whitesmoke;
+  opacity: 0.5;
 }
