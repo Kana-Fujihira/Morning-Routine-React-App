@@ -26,6 +26,10 @@ const router = createBrowserRouter([
         path: "/meditation",
         element: <Meditation />,
       },
+      {
+        path: "/meditation/:id",
+        element: <Meditation />,
+      },
     ],
   },
 ]);
