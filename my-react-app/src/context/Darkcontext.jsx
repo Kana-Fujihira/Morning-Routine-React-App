@@ -1,13 +1,12 @@
 import { createContext, useState, useContext } from "react";
 import PropTypes from "prop-types";
-
-const DarkContext = createContext();
+export const DarkContext = createContext();
 
 export function DarkProvider({ children }) {
-  const [darkmode, setDarkmode] = useState("light");
+  const [dark, setDark] = useState(false);
 
   return (
-    <DarkContext.Provider value={{ darkmode, setDarkmode }}>
+    <DarkContext.Provider value={{ dark, setDark }}>
       {children}
     </DarkContext.Provider>
   );
@@ -17,4 +16,4 @@ DarkProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export const useDarkmode = () => useContext(DarkContext);
+export const useDark = () => useContext(DarkContext);
