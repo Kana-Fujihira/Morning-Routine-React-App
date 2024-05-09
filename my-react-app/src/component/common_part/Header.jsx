@@ -1,4 +1,4 @@
-import { useDarkmode } from "./context/Darkmodecontext";
+import { useDarkmode } from "../../context/Darkcontext";
 
 function Header() {
   const { darkmode } = useDarkmode();
