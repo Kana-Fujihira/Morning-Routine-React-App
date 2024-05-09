@@ -26,10 +26,14 @@ const router = createBrowserRouter([
         path: "/meditation",
         element: <Meditation />,
       },
+      {
+        path: "/meditation/:id",
+        element: <Meditation />,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />,
+  <RouterProvider router={router} />
 );
