@@ -1,8 +1,12 @@
+import { useDarkmode } from "./context/Darkmodecontext";
+
 function Header() {
+  const { darkmode } = useDarkmode();
+
   return (
     <>
       <div>
-        <button>button dark and light mode</button>
+        <button>{darkmode}</button>
       </div>
     </>
   );
