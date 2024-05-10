@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import meditationTipsData from "../../../data/meditationtips.json";
-
+import PropTypes from "prop-types";
 function MeditationTips() {
   const [tips, setTips] = useState([]); // State to store the selected tip
   const { id } = useParams();
@@ -30,5 +30,10 @@ function MeditationTips() {
     </>
   );
 }
+
+MeditationTips.propTypes = {
+  map: PropTypes.func.isRequired,
+  tips: PropTypes.string.isRequired,
+};
 
 export default MeditationTips;
