@@ -23,16 +23,6 @@ function Today() {
           onChange={(e) => setLocation(e.target.value)}
           placeholder="City Name"
         />
-        <button
-          type="button"
-          onClick={(e) => {
-            e.preventDefault();
-            setLocation(location);
-            console.log(data);
-          }}
-        >
-          Search
-        </button>
       </div>
       <div>
         <p>{data.name}</p>

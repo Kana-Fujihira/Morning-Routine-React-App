@@ -1,12 +1,17 @@
-import { useDarkmode } from "../../context/Darkcontext";
+// import { useContext } from "react";
+// import { DarkContext } from "../../context/Darkcontext";
+import { useDark } from "../../context/Darkcontext";
 
 function Header() {
-  const { darkmode } = useDarkmode();
+  const { dark, setDark } = useDark();
+  function toggleDark() {
+    setDark(!dark);
+  }
 
   return (
     <>
       <div>
-        <button>{darkmode}</button>
+        <button onClick={toggleDark}>Switch</button>
       </div>
     </>
   );

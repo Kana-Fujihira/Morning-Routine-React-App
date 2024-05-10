@@ -1,15 +1,12 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-:root {
-  --background-color: orange;
-  --font-color: black;
-}
-
-body {
+body .light {
   min-height: 100vh;
-  background: var(--background-color);
+  background: orange;
 }
 
 .containerAllPage {
@@ -18,4 +15,9 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+body .dark {
+  background: blue;
+  color: aliceblue;
 }
