@@ -4,9 +4,24 @@
   margin: 0;
 }
 
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("./assets/Montserrat-Regular.ttf") format("truetype");
+}
+
+:root {
+  --font-main: "Montserrat-Regular";
+}
+
 body .light {
+  font-family: var(--font-main);
+  .weatherPart,
+  .todolistPart,
+  .meditationPart {
+    background: #ffc75f;
+  }
   min-height: 100vh;
-  background: orange;
+  color: black;
 }
 
 .containerAllPage {
@@ -18,6 +33,12 @@ body .light {
 }
 
 body .dark {
-  background: blue;
-  color: aliceblue;
+  font-family: var(--font-main);
+  background: #080573;
+  .weatherPart,
+  .todolistPart,
+  .meditationPart {
+    background: white;
+  }
+  min-height: 100vh;
 }

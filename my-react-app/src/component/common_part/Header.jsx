@@ -1,6 +1,5 @@
-// import { useContext } from "react";
-// import { DarkContext } from "../../context/Darkcontext";
 import { useDark } from "../../context/Darkcontext";
+import "./header.css";
 
 function Header() {
   const { dark, setDark } = useDark();
@@ -11,7 +10,7 @@ function Header() {
   return (
     <>
       <div>
-        <button onClick={toggleDark}>Switch</button>
+      <input onClick={toggleDark} type="checkbox" id="toggle" />
       </div>
     </>
   );

@@ -1,0 +1,39 @@
+.todoContainer {
+  margin: 1rem;
+}
+
+.toDoAddinput {
+  cursor: pointer;
+  font-family: var(--font-main);
+}
+
+.to-do-list > button {
+  font-family: var(--font-main);
+}
+
+.to-do-list {
+  font-family: var(--font-main);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 2;
+  border-radius: 3vh;
+  background: #ffc75f;
+  opacity: 0.7;
+  padding: 10%;
+}
+
+body .dark {
+  .to-do-list {
+    background: white;
+  }
+
+  li {
+    color: black;
+  }
+}
