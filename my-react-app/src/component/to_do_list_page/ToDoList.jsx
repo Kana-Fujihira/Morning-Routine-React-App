@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Footer from "../common_part/Footer";
+import "./todolist.css";
 
 function ToDoList() {
   const [tasks, setTasks] = useState([]);
@@ -30,6 +32,7 @@ function ToDoList() {
             placeholder="Enter your task"
             value={newTask}
             onChange={handleInputChange}
+            className="toDoAddinput"
           />
           <button onClick={addTask}>Add</button>
         </div>
@@ -42,6 +45,7 @@ function ToDoList() {
           ))}
         </ol>
       </div>
+      <Footer />
     </>
   );
 }
