@@ -1,27 +1,27 @@
 import { Outlet } from "react-router-dom";
 import "./App.css";
 import Header from "../src/component/common_part/Header";
-import Footer from "../src/component/common_part/Footer";
-import { DarkProvider } from "./context/Darkcontext";
+import { useDark, DarkProvider } from "./context/Darkcontext";
 
 function App() {
+  const { dark } = useDark();
+
   return (
     <>
-      <DarkProvider>
-        <div className="headerPart">
-          <Header />
-        </div>
+      <div className={dark === false ? "body light" : "body dark"}>
+        <Header />
         <div className="containerAllPage">
-          <div className="outletPart">
-            <Outlet />
-          </div>
-          <div className="footerPart">
-            <Footer />
-          </div>
+          <Outlet />
         </div>
-      </DarkProvider>
+      </div>
     </>
   );
 }
 
-export default App;
+export default function AppWithProvider() {
+  return (
+    <DarkProvider>
+      <App />
+    </DarkProvider>
+  );
+}

@@ -1,10 +1,28 @@
 .weatherPart,
 .todolistPart,
 .meditationPart {
-  width: 100%;
-  padding: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 25vh;
+  width: 39vw;
   margin: 19%;
   border-radius: 3vh;
   background-color: whitesmoke;
-  opacity: 0.5;
+  opacity: 0.7;
+}
+
+img {
+  width: 55%;
+}
+
+a,
+img {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }

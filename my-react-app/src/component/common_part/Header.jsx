@@ -1,12 +1,16 @@
-import { useDarkmode } from "../../context/Darkcontext";
+import { useDark } from "../../context/Darkcontext";
+import "./header.css";
 
 function Header() {
-  const { darkmode } = useDarkmode();
+  const { dark, setDark } = useDark();
+  function toggleDark() {
+    setDark(!dark);
+  }
 
   return (
     <>
       <div>
-        <button>{darkmode}</button>
+      <input onClick={toggleDark} type="checkbox" id="toggle" />
       </div>
     </>
   );

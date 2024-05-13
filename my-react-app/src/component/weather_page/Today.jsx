@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./today.css";
 
 function Today() {
   const [data, setData] = useState({});
@@ -15,34 +16,29 @@ function Today() {
   }, [location]);
 
   return (
-    <div>
-      <div>
+    <>
+      <div className="citySearch">
         <input
           type="text"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
-          placeholder="City Name"
+          placeholder="Tap City Name"
         />
-        <button
-          type="button"
-          onClick={(e) => {
-            e.preventDefault();
-            setLocation(location);
-            console.log(data);
-          }}
-        >
-          Search
-        </button>
       </div>
-      <div>
-        <p>{data.name}</p>
-        {data.main ? <h1>{data.weather[0].main}</h1> : null}
-        <p>
-          {data.main ? <p>{data.main.temp_min}</p> : null}
-          {data.main ? <p>{data.main.temp_max}</p> : null}
-        </p>
+      <div className="todayWeather">
+        <div>
+          {data.main ? <h1>Your City is {data.name}</h1> : null}
+          {data.weather ? (
+            <h2>Today's weather is {data.weather[0].main}</h2>
+          ) : null}
+          {data.weather ? <p>{data.weather[0].description}</p> : null}
+          <h3>{data.main ? <p> ↑{data.main.temp_max} C </p> : null}</h3>
+          <h3>{data.main ? <p> ↓{data.main.temp_min} C</p> : null} </h3>
+
+          <h3>{data.main ? <p>Humidity {data.main.humidity} % </p> : null}</h3>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

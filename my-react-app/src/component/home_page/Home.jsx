@@ -11,20 +11,20 @@ function Home() {
         <div className="weatherPart">
           <Link to="/weather">
             <img src={weather} alt="Weather Icon" />
-            <p>Weather</p>
-          </Link>
+          </Link>{" "}
+          <p>Check Today's Weather</p>
         </div>
         <div className="todolistPart">
           <Link to="/todolist">
             <img src={todolist} alt="To Do List Icon" />
-            <p>To Do List</p>
           </Link>
+          <p>What's Your Task ?</p>
         </div>
         <div className="meditationPart">
           <Link to="/meditation">
             <img src={meditation} alt="Meditation Icon" />
-            <p>Meditatation</p>
           </Link>
+          <p>Get Ready With Fresh Mind</p>
         </div>
       </div>
     </>
