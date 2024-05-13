@@ -1,6 +1,6 @@
 import "./meditation.css";
 import { useState } from "react";
-// import MeditationTips from "../meditation_page/MeditationTips";
+import MeditationTips from "../meditation_page/MeditationTips";
 import Footer from "../common_part/Footer";
 
 function Meditation() {
@@ -30,7 +30,7 @@ function Meditation() {
         <button onClick={handleReset} className="mediButton">
           Reset
         </button>
-        {/* <MeditationTips /> */}
+        <MeditationTips />
       </div>
       <Footer />
     </>

@@ -16,6 +16,7 @@ function MeditationTips() {
 
   console.log(meditationTipsData);
   console.log(id);
+
   return (
     <>
       <h2>Meditation Tips</h2>
