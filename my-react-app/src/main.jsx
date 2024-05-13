@@ -23,13 +23,18 @@ const router = createBrowserRouter([
         element: <ToDoList />,
       },
       {
-        path: "/medidation",
+        path: "/meditation",
         element: <Meditation />,
+      },
+      {
+        path: "/meditation/:id",
+        element: <Meditation />,
+        id: "/meditation/:id "
       },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />,
+  <RouterProvider router={router} />
 );
